@@ -8,9 +8,9 @@ La web está generada de forma estática con **Hugo** y preparada para desplegar
 
 ## Secciones
 
-- [Blog](/posts/): Notas sobre despliegue, configuración de servidores y herramientas web.
-- [Sobre mí](/sobre-mi/): Información sobre mi perfil en ASIR y administración de sistemas.
-- [Contacto](/contact/): Vías para comunicarse conmigo.
+- [Blog](posts/): Notas sobre despliegue, configuración de servidores y herramientas web.
+- [Sobre mí](sobre-mi/): Información sobre mi perfil en ASIR y administración de sistemas.
+- [Contacto](contact/): Vías para comunicarse conmigo.
 
 ## Sobre mí
 Puedes ver mis proyectos en mi [perfil de GitHub](https://github.com/ikerest).

@@ -10,7 +10,7 @@
     {{ .Content }}
   </div>
   {{ if eq .Section "posts" }}
-    <a href="/posts/" class="btn-back">&larr; volver al listado</a>
+    <a href="{{ "posts/" | relURL }}" class="btn-back">&larr; volver al listado</a>
   {{ end }}
 </article>
 {{ partial "footer.html" . }}

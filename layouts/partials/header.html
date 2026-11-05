@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ .Site.Title }}</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 </head>
 <body>
   <header>
     <div class="wrapper header-inner">
-      <a class="prompt" href="/">
+      <a class="prompt" href="{{ .Site.Home.RelPermalink }}">
         <span class="user">iker@iaw</span><span class="symbol">:</span><span class="path">~</span><span class="symbol">$</span>
       </a>
       <nav>
-        <a href="/">[inicio]</a>
-        <a href="/posts/">[blog]</a>
-        <a href="/sobre-mi/">[sobre-mí]</a>
-        <a href="/contact/">[contacto]</a>
+        <a href="{{ .Site.Home.RelPermalink }}">[inicio]</a>
+        <a href="{{ "posts/" | relURL }}">[blog]</a>
+        <a href="{{ "sobre-mi/" | relURL }}">[sobre-mí]</a>
+        <a href="{{ "contact/" | relURL }}">[contacto]</a>
         <a class="github-link" href="https://github.com/ikerest" target="_blank" rel="noopener noreferrer">[github: @ikerest]</a>
       </nav>
     </div>
