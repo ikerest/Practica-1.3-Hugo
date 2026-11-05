@@ -1,5 +1,10 @@
 baseURL = "https://ikerest.github.io/Practica-1.3-Hugo/"
 languageCode = "es"
-title = "Sitio web de Iker Estebaranz — IAW 2º ASIR"
+title = "Iker Estebaranz · Laboratorio IAW (2º ASIR)"
 publishDir = "html"
 disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Sitio web estático generado con Hugo y publicado en GitHub Pages — Práctica P1.3 de Implantación de Aplicaciones Web"
+  author = "Iker Estebaranz"
+  github = "https://github.com/ikerest"
