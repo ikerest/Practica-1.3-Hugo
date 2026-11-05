@@ -1,70 +1,63 @@
-# IAW — Práctica P1.2: Tu mini sitio web de la mano de Hugo
+# Práctica P1.3 IAW — Publicando mi sitio Hugo en GitHub Pages
 
-- Alumno: Iker Estebaranz (@ikerest)
-- Módulo: Implantación de Aplicaciones Web (IAW) — 2º ASIR
-- Máquina Virtual: UBUNTUUUUUASO (Ubuntu 64-bit, usuario iker)
-- Servidor web: Nginx
-- Perfil de GitHub (P1.1): https://github.com/ikerest
+- **Alumno:** Iker Estebaranz (`@ikerest`)
+- **Curso:** 2º ASIR — Implantación de Aplicaciones Web (IAW)
+- **Web publicada en GitHub Pages:** [https://ikerest.github.io/Practica-1.3-Hugo/](https://ikerest.github.io/Practica-1.3-Hugo/)
+- **Repositorio del proyecto:** [https://github.com/ikerest/Practica-1.3-Hugo](https://github.com/ikerest/Practica-1.3-Hugo)
+- **Mi perfil de GitHub (P1.1):** [https://github.com/ikerest](https://github.com/ikerest)
 
 ---
 
-## 1. Instalación de Hugo en la Máquina Virtual con los comandos aportados por Jordi en su guía.
+## ¿Qué he hecho en esta práctica?
 
-## 2. Creación del Sitio y Estructura Base
+En esta práctica P1.3 he cogido el mini sitio web que ya tenía montado en local con Nginx de la práctica anterior (P1.2) y lo he preparado para publicarlo directamente en Internet usando **GitHub Pages**.
 
-Se inicializó la estructura del sitio con configuración en YAML (hugo.yaml):
+La idea principal con la que me quedo de esta práctica es cómo funciona realmente un generador estático como Hugo cuando lo subes a un hosting como GitHub Pages: yo edito mis archivos fuente (`content/`, `layouts/`, `hugo.toml`), pruebo en local con `hugo server -D`, pero GitHub Pages no ejecuta Hugo por detrás, sino que solo sirve el HTML plano que generamos al lanzar el comando `hugo` en la terminal.
+
+---
+
+## Pasos que he ido siguiendo
+
+### 1. Partir de mi web de la P1.2
+He partido de la estructura que ya hice en la P1.2 (con la portada, las páginas de *Sobre mí* y *Contacto*, los parciales de cabecera y pie de página en `layouts/partials/`, el blog y el estilo de terminal en `static/css/style.css`). Antes de tocar nada he comprobado en local que todo seguía viéndose bien.
+
+### 2. Cambiar la configuración a `hugo.toml` para GitHub Pages
+Siguiendo el guion de la práctica, he pasado la configuración a `hugo.toml` para indicarle a Hugo la URL pública final con la subruta del repositorio (`baseURL`), y sobre todo el `publishDir = "html"`, para que al compilar guarde toda la web dentro de la carpeta `html/` (en lugar de `public/`):
+
+```toml
+baseURL = "https://ikerest.github.io/Practica-1.3-Hugo/"
+languageCode = "es"
+title = "Iker Estebaranz · Laboratorio IAW (2º ASIR)"
+publishDir = "html"
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Sitio web estático generado con Hugo y publicado en GitHub Pages — Práctica P1.3 de Implantación de Aplicaciones Web"
+  author = "Iker Estebaranz"
+  github = "https://github.com/ikerest"
+```
+
+También he creado el archivo vacío `static/.nojekyll` para que, al generar la carpeta `html/`, se copie dentro y GitHub no intente procesar la web con Jekyll.
+
+### 3. Corregir las rutas del CSS y los enlaces con `relURL`
+En la P1.2 tenía puestas rutas como `/css/style.css` o `/posts/` directamente en las plantillas porque en Nginx colgaba todo de la raíz `/`. Al subirlo a GitHub Pages bajo la subruta `/Practica-1.3-Hugo/`, si dejaba eso así se iban a romper los estilos y los enlaces del menú.
+
+Para solucionarlo (apoyándome en la IA para ver cómo funcionaba exactamente la sintaxis de las llaves de Hugo en las plantillas) he cambiado `layouts/partials/header.html` y el resto de layouts usando `{{ "css/style.css" | relURL }}` y `{{ .Site.Home.RelPermalink }}`. Así Hugo le añade sola la ruta del repositorio delante y carga el CSS a la primera.
+
+### 4. Personalizar título, descripción y nueva entrada en el blog
+En el último paso de la guía he añadido el parámetro `description` en `hugo.toml` y he metido la etiqueta `<meta name="description" content="{{ .Site.Params.description }}">` en el `header.html`. Además, he aprovechado para añadir una tercera entrada en el blog (`content/posts/despliegue-github-pages.md`) resumiendo qué es una página web estática y los pasos de este despliegue.
+
+### 5. Generar `html/` y subir los cambios con Git
+Cada vez que he hecho cambios he ejecutado:
 
 ```bash
-cd ~/Escritorio
-hugo new site ProyectoHUGO --format yaml
-cd ProyectoHUGO
+hugo --cleanDestinationDir
 ```
 
-Configuración en hugo.yaml:
+Con esto se actualiza la carpeta `html/` con todo el sitio compilado (sin borradores) listo para que GitHub Pages lo sirva desde la rama `main` y la carpeta `/html`.
 
-```yaml
-baseURL: "http://localhost:1313/"
-locale: "es-es"
-title: "Mini Sitio Web con Hugo - Iker Estebaranz (IAW P1.2)"
-disableKinds:
-  - "taxonomy"
-  - "term"
-```
+---
 
-El servidor local de desarrollo se prueba con:
-```bash
-hugo server -D --watch
-```
+## Nota sobre el uso de IA
 
-## 3. Separar Código y Contenido en Markdown 
-
-Se creó la portada en content/_index.md con su front matter, y la plantilla layouts/home.html que inyecta dinámicamente las variables de título y contenido:
-
-```html
-{{ partial "header.html" . }}
-<h1>{{ .Title }}</h1>
-{{ .Content }}
-{{ partial "footer.html" . }}
-```
-
-## 4. Parciales y Hojas de Estilo 
-
-Los elementos comunes (cabecera con navegación y pie de página) se crearon como parciales dentro de layouts/partials/ (header.html y footer.html). Se añadió la hoja de estilo en static/css/style.css para servirla estáticamente.
-
-Para poner el sitio en producción con Nginx, basta con compilar con hugo y copiar el contenido de public/ a /var/www/html/ o configurar un server block en Nginx.
-
-## 5. Páginas de Contenido Adicionales
-
-Se añadieron las páginas content/contact.md y content/sobre-mi.md, gestionadas mediante la plantilla layouts/page.html.
-
-## 6. Sección de Blog y Entradas
-
-En este apartado y en el consiguiente crear el código de la página web me he apoyado un poco en la Inteligencia artificial como Gemini 4 Argon, ya que personalemnte programación es un área que no domino tanto. Se creó la sección content/posts/ con las entradas hello-world.md y practica-hugo-iaw.md. La plantilla layouts/section.html recorre los artículos usando la función range para las páginas regulares mostrando fecha formateada, resumen y enlace a cada publicación.
-
-## 7. Enlace al Perfil de GitHub de la P1.1 
-
-El enlace al README de perfil de GitHub (https://github.com/ikerest) se encuentra integrado en:
-- El menú de navegación (header.html) en la barra superior.
-- La portada (content/_index.md) en la sección obligatoria "Sobre mí".
-- La página content/sobre-mi.md.
-- El pie de página (footer.html).
+Igual que en la práctica P1.2, quiero dejar claro que para las partes más complicadas de código —como el diseño CSS estilo terminal (`static/css/style.css`), la sintaxis de las plantillas de Hugo (`relURL`, `RelPermalink`, variables de `.Site.Params`) y estructurar el texto de los posts del blog— me he apoyado en la IA (Gemini), ya que la programación y el diseño web no son mi fuerte. Eso sí, toda la configuración del despliegue, entender por qué hay que compilar en `html/` y las pruebas las he ido siguiendo paso a paso con la guía.
