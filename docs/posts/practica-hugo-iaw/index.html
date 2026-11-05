@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Despliegue del sitio con Hugo y Nginx en la VM · Iker Estebaranz · Laboratorio IAW (2º ASIR)</title>
+  <meta name="description" content="Sitio web estático generado con Hugo y publicado en GitHub Pages — Práctica P1.3 de Implantación de Aplicaciones Web">
+  <link rel="icon" type="image/svg+xml" href="/Practica-1.3-Hugo/favicon.svg">
+  <link rel="stylesheet" href="/Practica-1.3-Hugo/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="wrapper header-inner">
+      <a class="prompt" href="/Practica-1.3-Hugo/">
+        <span class="user">iker@iaw</span><span class="symbol">:</span><span class="path">~</span><span class="symbol">$</span>
+      </a>
+      <nav>
+        <a href="/Practica-1.3-Hugo/">[inicio]</a>
+        <a href="/Practica-1.3-Hugo/posts/">[blog]</a>
+        <a href="/Practica-1.3-Hugo/sobre-mi/">[sobre-mí]</a>
+        <a href="/Practica-1.3-Hugo/contact/">[contacto]</a>
+        <a class="github-link" href="https://github.com/ikerest" target="_blank" rel="noopener noreferrer">[github: @ikerest]</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrapper">
+    <div class="content-box">
+
+<article>
+  
+    <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent-alt); margin-bottom: 0.5rem;">
+      publicado: 2026-10-29
+    </div>
+  
+  <h1>Despliegue del sitio con Hugo y Nginx en la VM</h1>
+  <div>
+    <p>Notas sobre la configuración y puesta en marcha de Hugo en la máquina virtual Ubuntu para la práctica P1.2 de IAW:</p>
+<ol>
+<li><strong>Instalación de Hugo:</strong> Descarga del binario de 64 bits en <code>~/.local/bin/hugo</code> para contar con una versión actual frente a la versión antigua de los repositorios.</li>
+<li><strong>Plantillas y parciales:</strong> Organización del código HTML en <code>layouts/</code> y <code>layouts/partials/</code> para reutilizar cabeceras y pies de página.</li>
+<li><strong>Servicio web:</strong> Los ficheros generados en el directorio <code>public/</code> pueden copiarse a <code>/var/www/html/</code> para que Nginx los sirva a través de la red local sin necesidad de backend dinámico.</li>
+<li><strong>Enlace a GitHub:</strong> Vinculación con el perfil de GitHub <code>@ikerest</code> de la práctica P1.1.</li>
+</ol>
+
+  </div>
+  
+    <a href="/Practica-1.3-Hugo/posts/" class="btn-back">&larr; volver al listado</a>
+  
+</article>
+    </div>
+  </main>
+  <footer>
+    <div class="wrapper footer-inner">
+      <span>IAW P1.2 &amp; P1.3 · 2º ASIR · Hugo + GitHub Pages</span>
+      <div>
+        <a href="https://github.com/ikerest" target="_blank" rel="noopener noreferrer">github.com/ikerest</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
