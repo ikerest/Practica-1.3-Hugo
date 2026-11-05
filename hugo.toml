@@ -1,0 +1,5 @@
+baseURL = "https://ikerest.github.io/Practica-1.3-Hugo/"
+languageCode = "es"
+title = "Sitio web de Iker Estebaranz — IAW 2º ASIR"
+publishDir = "html"
+disableKinds = ["taxonomy", "term"]
