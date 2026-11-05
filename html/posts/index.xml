@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Posts on Sitio web de Iker Estebaranz — IAW 2º ASIR</title>
+		<link>https://ikerest.github.io/Practica-1.3-Hugo/posts/</link>
+		<description>Recent content in Posts on Sitio web de Iker Estebaranz — IAW 2º ASIR</description>
+		<generator>Hugo</generator>
+		<language>es</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 29 Oct 2026 17:30:00 +0100</lastBuildDate>
+		
+			<atom:link href="https://ikerest.github.io/Practica-1.3-Hugo/posts/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Despliegue del sitio con Hugo y Nginx en la VM</title>
+				<link>https://ikerest.github.io/Practica-1.3-Hugo/posts/practica-hugo-iaw/</link>
+				<pubDate>Thu, 29 Oct 2026 17:30:00 +0100</pubDate>
+				<guid>https://ikerest.github.io/Practica-1.3-Hugo/posts/practica-hugo-iaw/</guid>
+				<description>&lt;p&gt;Notas sobre la configuración y puesta en marcha de Hugo en la máquina virtual Ubuntu para la práctica P1.2 de IAW:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Instalación de Hugo:&lt;/strong&gt; Descarga del binario de 64 bits en &lt;code&gt;~/.local/bin/hugo&lt;/code&gt; para contar con una versión actual frente a la versión antigua de los repositorios.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Plantillas y parciales:&lt;/strong&gt; Organización del código HTML en &lt;code&gt;layouts/&lt;/code&gt; y &lt;code&gt;layouts/partials/&lt;/code&gt; para reutilizar cabeceras y pies de página.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Servicio web:&lt;/strong&gt; Los ficheros generados en el directorio &lt;code&gt;public/&lt;/code&gt; pueden copiarse a &lt;code&gt;/var/www/html/&lt;/code&gt; para que Nginx los sirva a través de la red local sin necesidad de backend dinámico.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Enlace a GitHub:&lt;/strong&gt; Vinculación con el perfil de GitHub &lt;code&gt;@ikerest&lt;/code&gt; de la práctica P1.1.&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+			</item>
+			<item>
+				<title>Primera entrada en el blog con Hugo</title>
+				<link>https://ikerest.github.io/Practica-1.3-Hugo/posts/hello-world/</link>
+				<pubDate>Thu, 29 Oct 2026 10:00:00 +0100</pubDate>
+				<guid>https://ikerest.github.io/Practica-1.3-Hugo/posts/hello-world/</guid>
+				<description>&lt;p&gt;Esta es la primera publicación para comprobar el funcionamiento de las secciones en Hugo.&lt;/p&gt;&#xA;&lt;p&gt;Los ficheros creados dentro de &lt;code&gt;content/posts/&lt;/code&gt; son tratados por Hugo como un tipo de contenido agrupado. La plantilla &lt;code&gt;layouts/section.html&lt;/code&gt; se encarga de iterar sobre ellos con la variable &lt;code&gt;range .RegularPages&lt;/code&gt; y mostrar el listado con fechas y enlaces a cada entrada individual.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

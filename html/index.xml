@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Sitio web de Iker Estebaranz on Sitio web de Iker Estebaranz — IAW 2º ASIR</title>
+		<link>https://ikerest.github.io/Practica-1.3-Hugo/</link>
+		<description>Recent content in Sitio web de Iker Estebaranz on Sitio web de Iker Estebaranz — IAW 2º ASIR</description>
+		<generator>Hugo</generator>
+		<language>es</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 29 Oct 2026 17:30:00 +0100</lastBuildDate>
+		
+			<atom:link href="https://ikerest.github.io/Practica-1.3-Hugo/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Despliegue del sitio con Hugo y Nginx en la VM</title>
+				<link>https://ikerest.github.io/Practica-1.3-Hugo/posts/practica-hugo-iaw/</link>
+				<pubDate>Thu, 29 Oct 2026 17:30:00 +0100</pubDate>
+				<guid>https://ikerest.github.io/Practica-1.3-Hugo/posts/practica-hugo-iaw/</guid>
+				<description>&lt;p&gt;Notas sobre la configuración y puesta en marcha de Hugo en la máquina virtual Ubuntu para la práctica P1.2 de IAW:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Instalación de Hugo:&lt;/strong&gt; Descarga del binario de 64 bits en &lt;code&gt;~/.local/bin/hugo&lt;/code&gt; para contar con una versión actual frente a la versión antigua de los repositorios.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Plantillas y parciales:&lt;/strong&gt; Organización del código HTML en &lt;code&gt;layouts/&lt;/code&gt; y &lt;code&gt;layouts/partials/&lt;/code&gt; para reutilizar cabeceras y pies de página.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Servicio web:&lt;/strong&gt; Los ficheros generados en el directorio &lt;code&gt;public/&lt;/code&gt; pueden copiarse a &lt;code&gt;/var/www/html/&lt;/code&gt; para que Nginx los sirva a través de la red local sin necesidad de backend dinámico.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Enlace a GitHub:&lt;/strong&gt; Vinculación con el perfil de GitHub &lt;code&gt;@ikerest&lt;/code&gt; de la práctica P1.1.&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+			</item>
+			<item>
+				<title>Primera entrada en el blog con Hugo</title>
+				<link>https://ikerest.github.io/Practica-1.3-Hugo/posts/hello-world/</link>
+				<pubDate>Thu, 29 Oct 2026 10:00:00 +0100</pubDate>
+				<guid>https://ikerest.github.io/Practica-1.3-Hugo/posts/hello-world/</guid>
+				<description>&lt;p&gt;Esta es la primera publicación para comprobar el funcionamiento de las secciones en Hugo.&lt;/p&gt;&#xA;&lt;p&gt;Los ficheros creados dentro de &lt;code&gt;content/posts/&lt;/code&gt; son tratados por Hugo como un tipo de contenido agrupado. La plantilla &lt;code&gt;layouts/section.html&lt;/code&gt; se encarga de iterar sobre ellos con la variable &lt;code&gt;range .RegularPages&lt;/code&gt; y mostrar el listado con fechas y enlaces a cada entrada individual.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Contacto</title>
+				<link>https://ikerest.github.io/Practica-1.3-Hugo/contact/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://ikerest.github.io/Practica-1.3-Hugo/contact/</guid>
+				<description>&lt;p&gt;Para consultas relacionadas con este proyecto o temas del ciclo ASIR, puedes localizarme en:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Correo: &lt;a href=&#34;mailto:ikerestebaranz@gmail.com&#34;&gt;ikerestebaranz@gmail.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Perfil de GitHub: &lt;a href=&#34;https://github.com/ikerest&#34;&gt;https://github.com/ikerest&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+			<item>
+				<title>Sobre mí</title>
+				<link>https://ikerest.github.io/Practica-1.3-Hugo/sobre-mi/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://ikerest.github.io/Practica-1.3-Hugo/sobre-mi/</guid>
+				<description>&lt;p&gt;Mi nombre es &lt;strong&gt;Iker Estebaranz&lt;/strong&gt; y curso 2º de &lt;strong&gt;Administración de Sistemas Informáticos en Red (ASIR)&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Este mini sitio web forma parte de las prácticas del módulo de &lt;strong&gt;Implantación de Aplicaciones Web&lt;/strong&gt;, donde trabajamos la arquitectura cliente-servidor y el despliegue de sitios estáticos optimizados con &lt;strong&gt;Hugo&lt;/strong&gt; servidos mediante &lt;strong&gt;Nginx&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;áreas-técnicas&#34;&gt;Áreas técnicas&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Sistemas:&lt;/strong&gt; Administración y automatización en distribuciones Linux (Ubuntu Server, Debian).&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Servidores web:&lt;/strong&gt; Configuración de Nginx como servidor web y proxy inverso.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Redes y servicios:&lt;/strong&gt; Enrutamiento, SSH, cortafuegos con UFW/iptables y servicios de resolución DNS.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Entornos:&lt;/strong&gt; Virtualización en VirtualBox con adaptadores en modo puente y control de versiones mediante Git por terminal.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;sobre-mí&#34;&gt;Sobre mí&lt;/h2&gt;&#xA;&lt;p&gt;Puedes ver mis proyectos en mi &lt;a href=&#34;https://github.com/ikerest&#34;&gt;perfil de GitHub&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

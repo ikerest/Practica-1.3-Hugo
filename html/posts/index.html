@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posts · Sitio web de Iker Estebaranz — IAW 2º ASIR</title>
+  <link rel="icon" type="image/svg+xml" href="/Practica-1.3-Hugo/favicon.svg">
+  <link rel="stylesheet" href="/Practica-1.3-Hugo/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="wrapper header-inner">
+      <a class="prompt" href="/Practica-1.3-Hugo/">
+        <span class="user">iker@iaw</span><span class="symbol">:</span><span class="path">~</span><span class="symbol">$</span>
+      </a>
+      <nav>
+        <a href="/Practica-1.3-Hugo/">[inicio]</a>
+        <a href="/Practica-1.3-Hugo/posts/">[blog]</a>
+        <a href="/Practica-1.3-Hugo/sobre-mi/">[sobre-mí]</a>
+        <a href="/Practica-1.3-Hugo/contact/">[contacto]</a>
+        <a class="github-link" href="https://github.com/ikerest" target="_blank" rel="noopener noreferrer">[github: @ikerest]</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrapper">
+    <div class="content-box">
+
+<h1>Posts</h1>
+<p style="color: var(--text-muted);">
+  Registro de notas y artículos sobre el despliegue de sitios estáticos y administración web.
+</p>
+
+<ul class="post-log">
+
+  <li class="post-log-item">
+    <div class="post-meta-row">
+      <span class="post-meta-date">2026-10-29</span>
+      <span>·</span>
+      <span>1 min lectura</span>
+    </div>
+    <div class="post-log-title">
+      <a href="/Practica-1.3-Hugo/posts/practica-hugo-iaw/">Despliegue del sitio con Hugo y Nginx en la VM</a>
+    </div>
+    <p class="post-log-summary">Notas sobre la configuración y puesta en marcha de Hugo en la máquina virtual Ubuntu para la práctica P1.2 de IAW:
+Instalación de Hugo: Descarga del binario de 64 bits en ~/.local/bin/hugo para contar con una versión actual frente a la versión antigua de los repositorios. Plantillas y parciales: Organización del código HTML en layouts/ y layouts/partials/ para reutilizar cabeceras y pies de página. Servicio web: Los ficheros generados en el directorio public/ pueden copiarse a /var/www/html/ para que Nginx los sirva a través de la red local sin necesidad de backend dinámico. Enlace a GitHub: Vinculación con el perfil de GitHub @ikerest de la práctica P1.1. </p>
+    <a class="post-log-link" href="/Practica-1.3-Hugo/posts/practica-hugo-iaw/">leer artículo &rarr;</a>
+  </li>
+
+  <li class="post-log-item">
+    <div class="post-meta-row">
+      <span class="post-meta-date">2026-10-29</span>
+      <span>·</span>
+      <span>1 min lectura</span>
+    </div>
+    <div class="post-log-title">
+      <a href="/Practica-1.3-Hugo/posts/hello-world/">Primera entrada en el blog con Hugo</a>
+    </div>
+    <p class="post-log-summary">Esta es la primera publicación para comprobar el funcionamiento de las secciones en Hugo.
+Los ficheros creados dentro de content/posts/ son tratados por Hugo como un tipo de contenido agrupado. La plantilla layouts/section.html se encarga de iterar sobre ellos con la variable range .RegularPages y mostrar el listado con fechas y enlaces a cada entrada individual.
+</p>
+    <a class="post-log-link" href="/Practica-1.3-Hugo/posts/hello-world/">leer artículo &rarr;</a>
+  </li>
+
+</ul>
+
+    </div>
+  </main>
+  <footer>
+    <div class="wrapper footer-inner">
+      <span>IAW P1.2 · 2º ASIR · Servido con Nginx</span>
+      <div>
+        <a href="https://github.com/ikerest" target="_blank" rel="noopener noreferrer">github.com/ikerest</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
