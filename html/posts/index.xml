@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Thu, 29 Oct 2026 17:30:00 +0100</lastBuildDate>
+			<lastBuildDate>Thu, 05 Nov 2026 16:10:00 +0100</lastBuildDate>
 		
 			<atom:link href="https://ikerest.github.io/Practica-1.3-Hugo/posts/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Publicando nuestro sitio estático en GitHub Pages (P1.3)</title>
+				<link>https://ikerest.github.io/Practica-1.3-Hugo/posts/despliegue-github-pages/</link>
+				<pubDate>Thu, 05 Nov 2026 16:10:00 +0100</pubDate>
+				<guid>https://ikerest.github.io/Practica-1.3-Hugo/posts/despliegue-github-pages/</guid>
+				<description>&lt;p&gt;En esta tercera práctica (&lt;strong&gt;IAW P1.3&lt;/strong&gt;) damos el salto del entorno local de nuestra máquina virtual con Nginx a la publicación directa en Internet utilizando &lt;strong&gt;GitHub Pages&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;qué-aporta-una-página-web-estática-en-este-despliegue&#34;&gt;¿Qué aporta una página web estática en este despliegue?&lt;/h2&gt;&#xA;&lt;p&gt;Una &lt;strong&gt;página web estática&lt;/strong&gt; se entrega al navegador exactamente tal y como está almacenada en el sistema de archivos (&lt;code&gt;HTML&lt;/code&gt;, &lt;code&gt;CSS&lt;/code&gt;), sin pasar por un motor de ejecución en servidor ni consultar bases de datos en tiempo real. Al combinar &lt;strong&gt;Hugo&lt;/strong&gt; como generador y &lt;strong&gt;GitHub Pages&lt;/strong&gt; como alojamiento obtenemos varias ventajas clave:&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Despliegue del sitio con Hugo y Nginx en la VM</title>
 				<link>https://ikerest.github.io/Practica-1.3-Hugo/posts/practica-hugo-iaw/</link>
