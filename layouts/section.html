@@ -1,0 +1,26 @@
+{{ partial "header.html" . }}
+<h1>{{ .Title | default "Blog" }}</h1>
+<p style="color: var(--text-muted);">
+  Registro de notas y artículos sobre el despliegue de sitios estáticos y administración web.
+</p>
+
+<ul class="post-log">
+{{ range .RegularPages }}
+  <li class="post-log-item">
+    <div class="post-meta-row">
+      {{ if .Date }}<span class="post-meta-date">{{ .Date.Format "2006-01-02" }}</span>{{ end }}
+      <span>·</span>
+      <span>{{ .ReadingTime }} min lectura</span>
+    </div>
+    <div class="post-log-title">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </div>
+    <p class="post-log-summary">{{ .Summary | plainify }}</p>
+    <a class="post-log-link" href="{{ .RelPermalink }}">leer artículo &rarr;</a>
+  </li>
+{{ else }}
+  <li>No hay publicaciones disponibles.</li>
+{{ end }}
+</ul>
+
+{{ partial "footer.html" . }}

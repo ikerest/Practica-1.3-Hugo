@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ .Site.Title }}</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="wrapper header-inner">
+      <a class="prompt" href="/">
+        <span class="user">iker@iaw</span><span class="symbol">:</span><span class="path">~</span><span class="symbol">$</span>
+      </a>
+      <nav>
+        <a href="/">[inicio]</a>
+        <a href="/posts/">[blog]</a>
+        <a href="/sobre-mi/">[sobre-mí]</a>
+        <a href="/contact/">[contacto]</a>
+        <a class="github-link" href="https://github.com/ikerest" target="_blank" rel="noopener noreferrer">[github: @ikerest]</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrapper">
+    <div class="content-box">

@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+<article>
+  {{ if .Date }}
+    <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent-alt); margin-bottom: 0.5rem;">
+      publicado: {{ .Date.Format "2006-01-02" }}
+    </div>
+  {{ end }}
+  <h1>{{ .Title }}</h1>
+  <div>
+    {{ .Content }}
+  </div>
+  {{ if eq .Section "posts" }}
+    <a href="/posts/" class="btn-back">&larr; volver al listado</a>
+  {{ end }}
+</article>
+{{ partial "footer.html" . }}

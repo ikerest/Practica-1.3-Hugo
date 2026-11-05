@@ -1,0 +1,6 @@
+baseURL: "http://localhost:1313/"
+locale: "es-es"
+title: "Mini Sitio Web con Hugo - Iker Estebaranz (IAW P1.2)"
+disableKinds:
+  - "taxonomy"
+  - "term"
